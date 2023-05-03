@@ -1,6 +1,5 @@
 #include <U8glib.h>
 #include <Wire.h>
-#include <SPI.h>
 #include <DHT.h>
 #include <Adafruit_BMP280.h>
 #include <iarduino_RTC.h>  
@@ -102,13 +101,13 @@ void main_page()
   u8g.drawStr(30, 14, time.gettime("H:i:s"));
   u8g.drawHLine(5, 31, 118);
   u8g.setPrintPos(0, 50);
-  u8g.print(data[0][0]);
+  u8g.print(data[0][1]);
   u8g.drawStr(coordinates[0][1] - 45, 50, data_name[0][1]);
   u8g.setPrintPos(26, 35);
   u8g.print(data[1][1]);
   u8g.drawStr(coordinates[1][1] - 19, 35, data_name[1][1]);
   u8g.setPrintPos(79, 50);
-  u8g.print(data[2][2]);
+  u8g.print(data[2][1]);
   u8g.drawStr(coordinates[2][1] + 34, 50, data_name[2][1]);
 }
 
